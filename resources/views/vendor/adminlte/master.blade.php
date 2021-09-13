@@ -47,10 +47,6 @@
     {{-- Custom Stylesheets (post AdminLTE) --}}
     @yield('adminlte_css')
 
-    @foreach ($css_files as $css_file)
-        <link rel="stylesheet" href="{{ $css_file }}">
-    @endforeach
-
     {{-- Favicon --}}
     @if(config('adminlte.use_ico_only'))
         <link rel="shortcut icon" href="{{ asset('favicons/favicon.ico') }}" />
@@ -107,9 +103,6 @@
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
 
-        @foreach ($js_files as $js_file)
-        <script src="{{ $js_file }}"></script>
-    @endforeach
         <script>
         if (typeof $ !== 'undefined') {
             $(document).ready(function () {
